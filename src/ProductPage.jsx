@@ -124,7 +124,7 @@ export default function ProductPage() {
       <section className="features">
         <div className="features-inner">
           <div className="features-header">
-            <h2>Why {APP.name}?</h2>
+            <h2>{APP.featureDescription}</h2>
           </div>
           <div className="features-grid">
             {APP.features.map((f, i) => (

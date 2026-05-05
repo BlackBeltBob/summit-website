@@ -26,6 +26,7 @@ export const APP = {
     { src: "/screenshot2.png", alt: "Settings panel" },
   ],
 
+  featureDescription: "Our Strenghts",
   features: [
     { icon: "⚡", title: "Easily", body: "Tell us where you want to go, and we'll plot a course." },
     { icon: "🔒", title: "Safely", body: "Define your limits, and we'll avoid challenges too great for you." },
