@@ -14,7 +14,7 @@ const css = `
     color: var(--muted); margin-bottom: 1rem;
   }
   .privacy-hero h1 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
     margin-bottom: 1rem;
@@ -32,7 +32,7 @@ const css = `
     border-top: 1px solid var(--border);
   }
   .privacy-section h2 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1rem; font-weight: 700;
     margin-bottom: 0.75rem;
   }

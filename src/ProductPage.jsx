@@ -16,8 +16,8 @@ const css = `
     padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 1.5rem;
   }
   .hero h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3rem);
     font-weight: 800; line-height: 1.05; letter-spacing: -0.03em;
     margin-bottom: 1.25rem;
   }
@@ -46,7 +46,7 @@ const css = `
 
   .screenshots { padding: 3rem 2rem 5rem; }
   .screenshots-inner { max-width: 1000px; margin: 0 auto; }
-  .screenshots h2 { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
+  .screenshots h2 { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
   .screenshot-rail { display: flex; gap: 1.25rem; overflow-x: auto; padding-bottom: 1rem; scroll-snap-type: x mandatory; }
   .screenshot-rail::-webkit-scrollbar { height: 4px; }
   .screenshot-rail::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
@@ -69,13 +69,13 @@ const css = `
   .features-inner { max-width: 900px; margin: 0 auto; }
   .features-header { margin-bottom: 3rem; }
   .features-header h2 {
-    font-family: 'Syne', sans-serif; font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-family: 'Roboto', sans-serif; font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: 800; letter-spacing: -0.02em;
   }
   .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
   .feature-card { padding: 1.5rem; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); }
   .feature-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-  .feature-title { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 0.5rem; }
+  .feature-title { font-family: 'Roboto', sans-serif; font-weight: 700; margin-bottom: 0.5rem; }
   .feature-body { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
   @media (max-width: 600px) {

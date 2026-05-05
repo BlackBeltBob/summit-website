@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { APP } from "./config";
 
 export const globalCss = `
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap');
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -28,7 +26,7 @@ export const globalCss = `
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-family: 'Roboto', sans-serif; font-weight: 800;
     font-size: 1.25rem; letter-spacing: -0.02em;
     text-decoration: none; color: var(--ink);
   }
