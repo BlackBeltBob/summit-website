@@ -4,14 +4,14 @@
  * ============================================================
  */
 const APP = {
-  name: "YourApp",
-  tagline: "The one-line pitch that makes someone stop scrolling.",
+  name: "To The Summit!",
+  tagline: "Meet up on the mountain top. Build your own ski routes and find your friends.",
   description:
-    "A short paragraph (2–3 sentences) describing what your app does, who it's for, and the core problem it solves. Keep it honest and specific.",
+    "Roam the mountains, but find your way to your friends easily and safely. Plan your next adventures on the slopes, and organize meetups for lunch or apres-ski together while you're on the mountain.",
   ctaLabel: "Join the Waitlist",
-  ctaHref: "mailto:you@example.com",
+  ctaHref: "mailto:info@weatherlightventures.com",
   secondaryCtaLabel: "View on GitHub",
-  secondaryCtaHref: "https://github.com/you/yourapp",
+  secondaryCtaHref: "https://github.com/blackbeltbob/summit",
 
   // Drop your logo file into /public and set the path here.
   // Set to null to show the app name as text instead.
@@ -26,18 +26,18 @@ const APP = {
   ],
 
   features: [
-    { icon: "⚡", title: "Fast", body: "One sentence on why this feature matters to users." },
-    { icon: "🔒", title: "Private", body: "One sentence on why this feature matters to users." },
-    { icon: "🌍", title: "Everywhere", body: "One sentence on why this feature matters to users." },
-    { icon: "🛠️", title: "Customisable", body: "One sentence on why this feature matters to users." },
+    { icon: "⚡", title: "Easily", body: "Tell us where you want to go, and we'll plot a course." },
+    { icon: "🔒", title: "Safely", body: "Define your limits, and we'll avoid challenges too great for you." },
+    { icon: "🌍", title: "Everywhere", body: "Select locations from a list of slopes, restaurants, and bars." },
+    { icon: "🛠️", title: "Everyone", body: "Easy registration, just invite your friends to join you." },
   ],
 
   footer: {
-    company: "Your Name / Company",
+    company: "Weatherlight Ventures",
     year: new Date().getFullYear(),
     links: [
       { label: "Privacy Policy", href: "/privacy" },
-      { label: "Contact", href: "mailto:you@example.com" },
+      { label: "Contact", href: "mailto:info@weatherlightventures.com" },
     ],
   },
 };
