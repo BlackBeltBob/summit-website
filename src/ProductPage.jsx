@@ -1,86 +1,9 @@
-/**
- * ============================================================
- *  EDIT THIS SECTION ONLY — everything else updates itself
- * ============================================================
- */
-const APP = {
-  name: "To The Summit!",
-  tagline: "Meet up on the mountain top. Build your own ski routes and find your friends.",
-  description:
-    "Roam the mountains, but find your way to your friends easily and safely. Plan your next adventures on the slopes, and organize meetups for lunch or apres-ski together while you're on the mountain.",
-  ctaLabel: "Join the Waitlist",
-  ctaHref: "mailto:info@weatherlightventures.com",
-  secondaryCtaLabel: "View on GitHub",
-  secondaryCtaHref: "https://github.com/blackbeltbob/summit",
-
-  // Drop your logo file into /public and set the path here.
-  // Set to null to show the app name as text instead.
-  logoSrc: null, // e.g. "/logo.png"
-  logoAlt: "YourApp logo",
-
-  // Add as many screenshots as you like.
-  // Put images in /public and reference them as "/screenshot1.png" etc.
-  screenshots: [
-    { src: "/screenshot1.png", alt: "Main dashboard" },
-    { src: "/screenshot2.png", alt: "Settings panel" },
-  ],
-
-  features: [
-    { icon: "⚡", title: "Easily", body: "Tell us where you want to go, and we'll plot a course." },
-    { icon: "🔒", title: "Safely", body: "Define your limits, and we'll avoid challenges too great for you." },
-    { icon: "🌍", title: "Everywhere", body: "Select locations from a list of slopes, restaurants, and bars." },
-    { icon: "🛠️", title: "Everyone", body: "Easy registration, just invite your friends to join you." },
-  ],
-
-  footer: {
-    company: "Weatherlight Ventures",
-    year: new Date().getFullYear(),
-    links: [
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Contact", href: "mailto:info@weatherlightventures.com" },
-    ],
-  },
-};
-/** ============================================================ */
-
+import { APP } from "./config";
+import { globalCss, Nav, Footer } from "./layout";
 
 const css = `
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+  ${globalCss}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --ink:    #0f0f11;
-    --bg:     #f7f5f0;
-    --accent: #d4501a;
-    --muted:  #7a7870;
-    --card:   #ffffff;
-    --border: #e2e0da;
-    --radius: 16px;
-  }
-
-  body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; }
-
-  /* NAV */
-  .nav {
-    position: sticky; top: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 2rem;
-    background: rgba(247,245,240,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em; }
-  .nav-logo img { height: 32px; }
-  .nav-cta {
-    background: var(--ink); color: #fff;
-    border: none; border-radius: 8px;
-    padding: 0.5rem 1.25rem; font-size: 0.875rem; font-family: inherit;
-    cursor: pointer; transition: opacity .15s;
-  }
-  .nav-cta:hover { opacity: 0.8; }
-
-  /* HERO */
   .hero {
     max-width: 860px; margin: 0 auto;
     padding: 6rem 2rem 4rem;
@@ -121,7 +44,6 @@ const css = `
   }
   .btn-secondary:hover { border-color: var(--ink); }
 
-  /* SCREENSHOTS */
   .screenshots { padding: 3rem 2rem 5rem; }
   .screenshots-inner { max-width: 1000px; margin: 0 auto; }
   .screenshots h2 { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; }
@@ -131,10 +53,8 @@ const css = `
   .screenshot-card {
     flex: 0 0 auto; scroll-snap-align: start;
     width: min(80vw, 640px);
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    background: var(--card);
+    border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--border); background: var(--card);
     box-shadow: 0 2px 20px rgba(0,0,0,0.07);
   }
   .screenshot-card img { width: 100%; height: auto; display: block; }
@@ -145,7 +65,6 @@ const css = `
     color: var(--muted); font-size: 0.875rem;
   }
 
-  /* FEATURES */
   .features { padding: 4rem 2rem; background: var(--ink); color: #fff; }
   .features-inner { max-width: 900px; margin: 0 auto; }
   .features-header { margin-bottom: 3rem; }
@@ -159,18 +78,8 @@ const css = `
   .feature-title { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 0.5rem; }
   .feature-body { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
-  /* FOOTER */
-  .footer { padding: 2.5rem 2rem; border-top: 1px solid var(--border); }
-  .footer-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-copy { font-size: 0.875rem; color: var(--muted); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { font-size: 0.875rem; color: var(--muted); text-decoration: none; }
-  .footer-links a:hover { color: var(--ink); }
-
   @media (max-width: 600px) {
-    .nav { padding: 1rem; }
     .hero { padding: 4rem 1.25rem 3rem; }
-    .footer-inner { flex-direction: column; align-items: flex-start; }
   }
 `;
 
@@ -178,16 +87,8 @@ export default function ProductPage() {
   return (
     <>
       <style>{css}</style>
+      <Nav />
 
-      {/* NAV */}
-      <nav className="nav">
-        <div className="nav-logo">
-          {APP.logoSrc ? <img src={APP.logoSrc} alt={APP.logoAlt} /> : APP.name}
-        </div>
-        <a className="nav-cta" href={APP.ctaHref}>{APP.ctaLabel}</a>
-      </nav>
-
-      {/* HERO */}
       <section className="hero">
         <span className="hero-eyebrow">Early Access</span>
         <h1>{APP.tagline}</h1>
@@ -202,7 +103,6 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* SCREENSHOTS */}
       {APP.screenshots.length > 0 && (
         <section className="screenshots">
           <div className="screenshots-inner">
@@ -221,7 +121,6 @@ export default function ProductPage() {
         </section>
       )}
 
-      {/* FEATURES */}
       <section className="features">
         <div className="features-inner">
           <div className="features-header">
@@ -239,19 +138,7 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-inner">
-          <span className="footer-copy">
-            © {APP.footer.year} {APP.footer.company}
-          </span>
-          <nav className="footer-links">
-            {APP.footer.links.map((l, i) => (
-              <a key={i} href={l.href}>{l.label}</a>
-            ))}
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
